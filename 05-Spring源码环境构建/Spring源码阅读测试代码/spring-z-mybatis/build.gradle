@@ -1,0 +1,58 @@
+plugins {
+    id 'java'
+}
+
+group 'org.springframework'
+version '5.1.8.RELEASE'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    compile (project(":spring-aop"))
+    //compile (project(":spring-aspects"))
+    compile (project(":spring-beans"))
+    compile (project(":spring-context"))
+    compile (project(":spring-context-indexer"))
+    compile (project(":spring-context-support"))
+    compile (project(":spring-core"))
+    compile (project(":spring-expression"))
+    compile (project(":spring-framework-bom"))
+    compile (project(":spring-instrument"))
+    compile (project(":spring-jcl"))
+    compile (project(":spring-jdbc"))
+    compile (project(":spring-jms"))
+    compile (project(":spring-messaging"))
+    compile (project(":spring-orm"))
+    compile (project(":spring-oxm"))
+    compile (project(":spring-test"))
+    compile (project(":spring-tx"))
+    compile (project(":spring-web"))
+    compile (project(":spring-webmvc"))
+    compile (project(":spring-webflux"))
+    compile (project(":spring-websocket"))
+
+    compile group: 'org.aspectj', name: 'aspectjweaver', version: '1.9.4'
+
+    compile group: 'io.projectreactor', name: 'reactor-core', version: '3.2.10.RELEASE'
+
+    //mybatis, mybatis-spring的依赖
+    compile group: 'org.mybatis', name: 'mybatis', version: '3.5.2'
+    compile group: 'org.mybatis', name: 'mybatis-spring', version: '2.0.2'
+
+    //数据库连接池、mysql的jdbc驱动
+    compile group: 'com.alibaba', name: 'druid', version: '1.1.19'
+    compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.47'
+
+    //日志依赖
+    compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.26'
+    compile group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.11.2'
+    compile group: 'org.apache.logging.log4j', name: 'log4j-slf4j-impl', version: '2.11.2'
+}
+
+sourceSets.main.resources.srcDirs = ["src/main/java","src/main/resources"]

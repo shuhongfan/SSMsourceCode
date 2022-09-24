@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans
+	   http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="myBean" class="com.bjpowernode.bean.MyBean">
+		<property name="myAge" value="100"/>
+		<property name="myName" value="张三丰dev"/>
+	</bean>
+
+	<bean id="heBean" class="com.bjpowernode.bean.HeBean">
+		<property name="heName" value="张翠山"/>
+	</bean>
+
+	<bean id="mySpringAware" class="com.bjpowernode.aware.MySpringAware"/>
+
+	<bean id="myBeanPostProcessor" class="com.bjpowernode.processor.MyBeanPostProcessor"/>
+
+</beans>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<!--dtd的xml约束是有顺序，标签顺序不能错-->
+<configuration>
+
+    <!--mybatis框架的核心功能可以通过该配置进行设置-->
+
+    <!--配置属性-->
+    <properties resource="jdbc.properties"/>
+
+    <settings>
+        <!--mybatis输出日志，采用何种组件输出-->
+        <setting name="logImpl" value="SLF4J"/>
+        <!--开启二级缓存-->
+        <setting name="cacheEnabled" value="true"/>
+    </settings>
+
+    <!--类型别名-->
+    <typeAliases>
+        <typeAlias type="com.bjpowernode.model.Account" alias="Account"/>
+    </typeAliases>
+
+    <typeHandlers>
+        <!--自定义的类型转换器-->
+        <typeHandler handler="com.bjpowernode.type.CryptHandlerType"
+                     javaType="com.bjpowernode.model.IdCardType"/>
+    </typeHandlers>
+
+    <!--插件-->
+    <!--
+    <plugins>
+        <plugin interceptor="com.bjpowernode.plugin.xxxx"></plugin>
+    </plugins>
+    -->
+    
+    <!--环境配置-->
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="org.apache.ibatis.transaction.jdbc.JdbcTransactionFactory"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="${jdbc.driver}"/>
+                <property name="url" value="${jdbc.url}"/>
+                <property name="username" value="${jdbc.username}"/>
+                <property name="password" value="${jdbc.password}"/>
+            </dataSource>
+        </environment>
+
+        <environment id="test">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="${jdbc.driver}"/>
+                <property name="url" value="${jdbc.url}"/>
+                <property name="username" value="${jdbc.username}"/>
+                <property name="password" value="${jdbc.password}"/>
+            </dataSource>
+        </environment>
+
+        <environment id="product">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="${jdbc.driver}"/>
+                <property name="url" value="${jdbc.url}"/>
+                <property name="username" value="${jdbc.username}"/>
+                <property name="password" value="${jdbc.password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <!--映射器-->
+    <mappers>
+        <mapper resource="com/bjpowernode/mapper/AccountMapper.xml"/>
+        <mapper resource="com/bjpowernode/mapper/UsersMapper.xml"/>
+    </mappers>
+
+</configuration>

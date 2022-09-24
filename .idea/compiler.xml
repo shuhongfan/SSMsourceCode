@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="18-mybatis-plugin" />
+        <module name="21-java-spi-ext" />
+        <module name="22-spring-mvc" />
+        <module name="mybatis" />
+        <module name="20-servlet-3.0" />
+        <module name="23-spring-aop" />
+        <module name="19-spring-ioc" />
+        <module name="21-java-spi" />
+        <module name="17-mybatis-xml" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>

@@ -1,0 +1,5 @@
+#
+#Sun Jun 14 17:05:07 CST 2020
+com.bjpowernode.service.impl.UserServiceImpl=org.springframework.stereotype.Component
+com.bjpowernode.controller.UserInfoController=org.springframework.stereotype.Component
+com.bjpowernode.dao.impl.UserInfoDAOImpl=org.springframework.stereotype.Component

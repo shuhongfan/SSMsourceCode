@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xmlns:context="http://www.springframework.org/schema/context"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!--激活读取properties文件-->
+	<context:property-placeholder location="classpath:jdbc.properties"/>
+
+	<!--扫描基本包，得到包下带bean注解的bean对象-->
+	<context:component-scan base-package="com.bjpowernode"/>
+
+	<!--配置数据源-->
+	<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" destroy-method="close">
+		<property name="driverClassName" value="${jdbc.driverClassName}" />
+		<property name="url" value="${jdbc.url}" />
+		<property name="username" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
+	</bean>
+
+	<!--配置mybatis工厂bean：SqlSessionFactoryBean-->
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"/>
+		<!--此文件mybatis-config.xml在整合spring开发的时候，也可以省略，那么mybatis就是默认配置-->
+		<property name="configLocation" value="classpath:mybatis-config.xml"/>
+		<!--如果你的Mapper接口和Mapper.xml不在一个包下，那么需要指定Mapper.xml的位置-->
+		<property name="mapperLocations" value="classpath:mapper/*.xml"/>
+	</bean>
+
+	<!--配置mybatis mapper包扫描-->
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<!--扫描mapper包，把mapper包下的mapper接口注册为spring的bean定义 MapperFactoryBean-->
+		<!--扫描出来的每一个mapper接口，会变成MapperFactoryBean对象，MapperFactoryBean对象依赖sqlSessionFactory-->
+		<property name="basePackage" value="com.bjpowernode.mapper"/>
+		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+	</bean>
+
+</beans>

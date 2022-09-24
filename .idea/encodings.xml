@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/02-MyBatis动态代理深度剖析/17-mybatis-xml/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/02-MyBatis动态代理深度剖析/17-mybatis-xml/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/04-MyBatis扩展开发实战/18-mybatis-plugin/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/04-MyBatis扩展开发实战/18-mybatis-plugin/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/08-手写IOC与MVC源码分析/19-spring-ioc/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/08-手写IOC与MVC源码分析/19-spring-ioc/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/09-SringMVC源码分析/20-servlet-3.0/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/09-SringMVC源码分析/20-servlet-3.0/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/10-手写SpringMVC/21-java-spi/21-java-spi-ext/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/10-手写SpringMVC/21-java-spi/21-java-spi-ext/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/10-手写SpringMVC/21-java-spi/21-java-spi/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/10-手写SpringMVC/21-java-spi/21-java-spi/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/10-手写SpringMVC/22-spring-mvc/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/10-手写SpringMVC/22-spring-mvc/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/11-SpringAOP源码分析/23-spring-aop/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/11-SpringAOP源码分析/23-spring-aop/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mybatis-3-mybatis-3.5.4" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mybatis-3-mybatis-3.5.4/src/main/java" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

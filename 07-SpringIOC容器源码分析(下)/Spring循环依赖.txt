@@ -1,0 +1,81 @@
+Spring循环依赖
+
+Spring bean的创建，本质上是一个对象的创建；
+一个完整的对象包含两部分：当前对象和对象的属性所依赖的另一个对象；
+对象实例化通过反射实现，而对象的属性实例化通过依赖注入实现；
+Spring实例化bean是通过ApplicationContext.getBean()方法来进行的，如果要获取的对象又依赖了另一个对象，那么其首先会创建当前对象，然后通过递归调用ApplicationContext.getBean()方法来获取所依赖的对象，最后将获取到的对象注入到当前对象中；
+
+前提：（HeBean 依赖 MyBean，MyBean依赖HeBean）
+
+假设容器首先创建HeBean：
+
+1、创建HeBean对象：反射 （此时MyBean还没有创建）
+
+2、把“heBean”放入 singletonFactories的Map中；
+this.singletonFactories.put(beanName, singletonFactory);
+this.earlySingletonObjects.remove(beanName);
+
+3、给heBean设置属性值（也就是给heBean的成员变量赋值）
+
+4、当HeBean依赖了MyBean，而MyBean还没有创建，此时HeBean无法完成属性赋值，HeBean还是一个半成品，然后就跳到了：beanFactory.getBean(“myBean”); （递归到了获取bean的入口处）
+
+5、开始创建MyBean对象
+
+   1、创建MyBean对象：反射 （此时HeBean是个半成品）
+
+   2、把“myBean”放入 ingletonFactories的Map
+   this.singletonFactories.put(beanName, singletonFactory);
+   this.earlySingletonObjects.remove(beanName);
+
+   3、给myBean设置属性值（也就是给MyBean的成员变量赋值）
+
+   4、MyBean此时是一个半成品，此时代码：
+      
+      //解析候选者bean，会调beanFactory.getBean()方法获取bean，该方法内部会进行初始化
+      instanceCandidate = descriptor.resolveCandidate(autowiredBeanName, type, this);
+
+      此时并没有完成heBean属性设置然后就跳到了：beanFactory.getBean(“heBean”);（递归到了获取bean的入口处）
+      
+      去入口处：
+      public Object resolveCandidate(String beanName, Class<?> requiredType, BeanFactory beanFactory) throws BeansException {
+          //根据bean名称获取bean对象
+          return beanFactory.getBean(beanName);
+      }
+
+   5、从这里获取heBean： 
+      ObjectFactory<?> singletonFactory = this.singletonFactories.get(beanName);
+      singletonObject = singletonFactory.getObject();
+
+   6、把heBean放入map
+      this.earlySingletonObjects.put(beanName, singletonObject);
+      this.singletonFactories.remove(beanName);
+
+   7、回到入口处：
+      public Object resolveCandidate(String beanName, Class<?> requiredType, BeanFactory beanFactory) throws BeansException {
+          //根据bean名称获取bean对象
+	  return beanFactory.getBean(beanName);
+      }
+
+   8、此时已经拿到了HeBean对象，反射调用：field.set(bean, value); 把MyBean对象的heBean属性赋值，此时MyBean对象就完全创建好了；
+
+   9、把myBean放入ioc容器：
+      this.singletonObjects.put(beanName, singletonObject);
+      this.singletonFactories.remove(beanName);
+      this.earlySingletonObjects.remove(beanName);
+
+   10、返回到 resolveCandidate(String beanName, Class<?> requiredType, BeanFactory beanFactory) 方法
+     （相当于返回到创建HeBean的第4步，此时已经拿到mybean对象，通过反射调用field.set(bean, value);
+       把heBean对象的mybean属性赋值，此时HeBean对象也就创建好了，放入ioc的map容器中）
+
+
+循环依赖：
+
+1、setter注入  支持
+
+2、构造方法注入  不支持
+
+3、bean的多例模式  不支持
+
+
+
+
