@@ -1,0 +1,12 @@
+Idea中运行Gradle的spring代码乱码问题解决：
+
+（1）在idea安装目录bin目录下，在idea64.exe.vmoptions文件最后加上如下一行配置：
+
+-Dfile.encoding=UTF-8
+
+注：如果你是32位的操作系统，在idea.exe.vmoptions文件的最后也加上同样的那一行配置
+
+（2）在 C:\Users\Administrator\AppData\Roaming\JetBrains\IntelliJIdea2020.1 目录下的idea64.exe.vmoptions文件
+最后加上如下一行配置：
+
+-Dfile.encoding=UTF-8

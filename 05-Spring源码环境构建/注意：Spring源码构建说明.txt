@@ -1,0 +1,11 @@
+Spring源码我们原来讲课的时候构建是没有问题的（2019年和2020年），现在构建的时候会报错，提示401，401表示没有权限，我查了一下，原因是现在spring官方把下载依赖或插件的仓库被屏蔽了，需要登录授权才能下载，查到官方的博客说明如下：
+https://spring.io/blog/2020/10/29/notice-of-permissions-changes-to-repo-spring-io-fall-and-winter-2020
+
+由于Spring官方把仓库地址修改权限了，现在是401没有权限下载插件或依赖，所以你把gradle的仓库地址换成阿里云地址试一下
+
+Spring源码里面的 build.gradle  文件 的151行的位置，你改成下面这个：
+maven { url "https://maven.aliyun.com/repository/public" }
+maven { url "https://maven.aliyun.com/repository/spring" }
+
+另外如果你遇到关于kontilin版本报错，参考下面的链接（如果没有报错那就不用处理）：
+https://blog.csdn.net/qq_42223569/article/details/114073404

@@ -1,0 +1,7 @@
+#
+#Fri Aug 20 23:24:36 CST 2021
+com.bjpowernode.factorybean.MyService=org.springframework.stereotype.Component
+com.bjpowernode.bean.HeBean=org.springframework.stereotype.Component
+com.bjpowernode.Test1=org.springframework.stereotype.Component
+com.bjpowernode.config.SpringConfig=org.springframework.stereotype.Component
+com.bjpowernode.bean.MyBean=org.springframework.stereotype.Component

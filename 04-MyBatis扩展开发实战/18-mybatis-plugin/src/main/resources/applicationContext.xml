@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xmlns:context="http://www.springframework.org/schema/context"
+	   xmlns:tx="http://www.springframework.org/schema/tx"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans
+	   http://www.springframework.org/schema/beans/spring-beans.xsd
+	   http://www.springframework.org/schema/context
+	   https://www.springframework.org/schema/context/spring-context.xsd
+	   http://www.springframework.org/schema/tx
+	   http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+	<!--激活读取properties文件-->
+	<context:property-placeholder location="classpath:jdbc.properties"/>
+
+	<!--扫描基本包，得到包下带bean注解的bean对象-->
+	<context:component-scan base-package="com.bjpowernode"/>
+
+	<!--配置数据源：读-->
+	<bean id="readDataSource" class="com.zaxxer.hikari.HikariDataSource" destroy-method="close">
+		<property name="driverClassName" value="${read.jdbc.driver}" />
+		<property name="jdbcUrl" value="${read.jdbc.url}" />
+		<property name="username" value="${read.jdbc.username}" />
+		<property name="password" value="${read.jdbc.password}" />
+	</bean>
+
+	<!--配置数据源：写-->
+	<bean id="writeDataSource" class="com.zaxxer.hikari.HikariDataSource" destroy-method="close">
+		<property name="driverClassName" value="${write.jdbc.driver}" />
+		<property name="jdbcUrl" value="${write.jdbc.url}" />
+		<property name="username" value="${write.jdbc.username}" />
+		<property name="password" value="${write.jdbc.password}" />
+	</bean>
+
+	<!--动态数据源-->
+	<bean id="dynamicDataSource" class="com.bjpowernode.plugin.readwrite.DynamicDataSource">
+		<property name="targetDataSources">
+			<map>
+				<entry key="READ" value-ref="readDataSource"/>
+				<entry key="WRITE" value-ref="writeDataSource"/>
+			</map>
+		</property>
+	</bean>
+
+	<!--配置mybatis数据源的sqlSessionFactory -->
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dynamicDataSource"/>
+		<property name="configLocation" value="classpath:mybatis-config.xml"/>
+	</bean>
+
+	<!--配置mybatis mapper包扫描-->
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+		<property name="basePackage" value="com.bjpowernode.mapper"/>
+	</bean>
+
+	<!--配置数据源事务管理器-->
+	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dynamicDataSource"/>
+	</bean>
+
+	<!--注解驱动，用注解的方式管理事务-->
+	<tx:annotation-driven transaction-manager="transactionManager"/>
+	
+</beans>

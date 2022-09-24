@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans
+	   http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!--开发环境-->
+	<!--<beans profile="dev">
+		<import resource="applicationContext-dev.xml"/>
+	</beans>-->
+
+	<!--测试环境-->
+	<!--<beans profile="test">
+		<import resource="applicationContext-test.xml"/>
+	</beans>-->
+
+	<!--封装到了GenericBeanDefinition对象中-->
+	<bean id="myBean" class="com.bjpowernode.bean.MyBean">
+		<property name="myName" value="张三丰"/>
+		<property name="myAge" value="100"/>
+		<property name="heBean" ref="heBean"/>
+	</bean>
+
+	<bean id="heBean" class="com.bjpowernode.bean.HeBean">
+		<property name="heName" value="张翠山"/>
+		<property name="heAge" value="33"/>
+		<property name="myBean" ref="myBean"/>
+	</bean>
+
+	<!--<bean id="myBeanPostProcessor" class="com.bjpowernode.spring.processor.MyBeanPostProcessor"/>-->
+
+	<!--我们实现了Aware接口的bean-->
+	<!--<bean id="mySpringAware" class="com.bjpowernode.spring.aware.MySpringAware"/>-->
+
+</beans>

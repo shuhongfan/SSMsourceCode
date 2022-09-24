@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/mybatis-3-mybatis-3.5.4/pom.xml" />
+        <option value="$PROJECT_DIR$/02-MyBatis动态代理深度剖析/17-mybatis-xml/pom.xml" />
+        <option value="$PROJECT_DIR$/04-MyBatis扩展开发实战/18-mybatis-plugin/pom.xml" />
+        <option value="$PROJECT_DIR$/08-手写IOC与MVC源码分析/19-spring-ioc/pom.xml" />
+        <option value="$PROJECT_DIR$/09-SringMVC源码分析/20-servlet-3.0/pom.xml" />
+        <option value="$PROJECT_DIR$/10-手写SpringMVC/21-java-spi/21-java-spi/pom.xml" />
+        <option value="$PROJECT_DIR$/10-手写SpringMVC/21-java-spi/21-java-spi-ext/pom.xml" />
+        <option value="$PROJECT_DIR$/10-手写SpringMVC/22-spring-mvc/pom.xml" />
+        <option value="$PROJECT_DIR$/11-SpringAOP源码分析/23-spring-aop/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+  <component name="ProjectType">
+    <option name="id" value="jpab" />
+  </component>
+</project>

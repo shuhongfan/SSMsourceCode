@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/05-Spring源码环境构建/Spring源码阅读测试代码/spring-z-aop" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/05-Spring源码环境构建/Spring源码阅读测试代码/spring-z-aop" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/05-Spring源码环境构建/Spring源码阅读测试代码/spring-z-ioc" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/05-Spring源码环境构建/Spring源码阅读测试代码/spring-z-ioc" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/05-Spring源码环境构建/Spring源码阅读测试代码/spring-z-mvc" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/05-Spring源码环境构建/Spring源码阅读测试代码/spring-z-mvc" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/05-Spring源码环境构建/Spring源码阅读测试代码/spring-z-mvc-2" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/05-Spring源码环境构建/Spring源码阅读测试代码/spring-z-mvc-2" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/05-Spring源码环境构建/Spring源码阅读测试代码/spring-z-mybatis" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/05-Spring源码环境构建/Spring源码阅读测试代码/spring-z-mybatis" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/05-Spring源码环境构建/Spring源码阅读测试代码/spring-z-mybatis-2" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/05-Spring源码环境构建/Spring源码阅读测试代码/spring-z-mybatis-2" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/05-Spring源码环境构建/Spring源码阅读测试代码/spring-z-tx" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/05-Spring源码环境构建/Spring源码阅读测试代码/spring-z-tx" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/07-SpringIOC容器源码分析(下)/spring-framework-5.1.8.RELEASE" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/07-SpringIOC容器源码分析(下)/spring-framework-5.1.8.RELEASE" />
+            <option value="$PROJECT_DIR$/07-SpringIOC容器源码分析(下)/spring-framework-5.1.8.RELEASE/buildSrc" />
+            <option value="$PROJECT_DIR$/07-SpringIOC容器源码分析(下)/spring-framework-5.1.8.RELEASE/spring-aop" />
+            <option value="$PROJECT_DIR$/07-SpringIOC容器源码分析(下)/spring-framework-5.1.8.RELEASE/spring-aspects" />
+            <option value="$PROJECT_DIR$/07-SpringIOC容器源码分析(下)/spring-framework-5.1.8.RELEASE/spring-beans" />
+            <option value="$PROJECT_DIR$/07-SpringIOC容器源码分析(下)/spring-framework-5.1.8.RELEASE/spring-context" />
+            <option value="$PROJECT_DIR$/07-SpringIOC容器源码分析(下)/spring-framework-5.1.8.RELEASE/spring-context-indexer" />
+            <option value="$PROJECT_DIR$/07-SpringIOC容器源码分析(下)/spring-framework-5.1.8.RELEASE/spring-context-support" />
+            <option value="$PROJECT_DIR$/07-SpringIOC容器源码分析(下)/spring-framework-5.1.8.RELEASE/spring-core" />
+            <option value="$PROJECT_DIR$/07-SpringIOC容器源码分析(下)/spring-framework-5.1.8.RELEASE/spring-expression" />
+            <option value="$PROJECT_DIR$/07-SpringIOC容器源码分析(下)/spring-framework-5.1.8.RELEASE/spring-framework-bom" />
+            <option value="$PROJECT_DIR$/07-SpringIOC容器源码分析(下)/spring-framework-5.1.8.RELEASE/spring-instrument" />
+            <option value="$PROJECT_DIR$/07-SpringIOC容器源码分析(下)/spring-framework-5.1.8.RELEASE/spring-jcl" />
+            <option value="$PROJECT_DIR$/07-SpringIOC容器源码分析(下)/spring-framework-5.1.8.RELEASE/spring-jdbc" />
+            <option value="$PROJECT_DIR$/07-SpringIOC容器源码分析(下)/spring-framework-5.1.8.RELEASE/spring-jms" />
+            <option value="$PROJECT_DIR$/07-SpringIOC容器源码分析(下)/spring-framework-5.1.8.RELEASE/spring-messaging" />
+            <option value="$PROJECT_DIR$/07-SpringIOC容器源码分析(下)/spring-framework-5.1.8.RELEASE/spring-orm" />
+            <option value="$PROJECT_DIR$/07-SpringIOC容器源码分析(下)/spring-framework-5.1.8.RELEASE/spring-oxm" />
+            <option value="$PROJECT_DIR$/07-SpringIOC容器源码分析(下)/spring-framework-5.1.8.RELEASE/spring-test" />
+            <option value="$PROJECT_DIR$/07-SpringIOC容器源码分析(下)/spring-framework-5.1.8.RELEASE/spring-tx" />
+            <option value="$PROJECT_DIR$/07-SpringIOC容器源码分析(下)/spring-framework-5.1.8.RELEASE/spring-web" />
+            <option value="$PROJECT_DIR$/07-SpringIOC容器源码分析(下)/spring-framework-5.1.8.RELEASE/spring-webflux" />
+            <option value="$PROJECT_DIR$/07-SpringIOC容器源码分析(下)/spring-framework-5.1.8.RELEASE/spring-webmvc" />
+            <option value="$PROJECT_DIR$/07-SpringIOC容器源码分析(下)/spring-framework-5.1.8.RELEASE/spring-websocket" />
+            <option value="$PROJECT_DIR$/07-SpringIOC容器源码分析(下)/spring-framework-5.1.8.RELEASE/spring-z-aop" />
+            <option value="$PROJECT_DIR$/07-SpringIOC容器源码分析(下)/spring-framework-5.1.8.RELEASE/spring-z-ioc" />
+            <option value="$PROJECT_DIR$/07-SpringIOC容器源码分析(下)/spring-framework-5.1.8.RELEASE/spring-z-mvc" />
+            <option value="$PROJECT_DIR$/07-SpringIOC容器源码分析(下)/spring-framework-5.1.8.RELEASE/spring-z-mybatis" />
+            <option value="$PROJECT_DIR$/07-SpringIOC容器源码分析(下)/spring-framework-5.1.8.RELEASE/spring-z-test-01" />
+            <option value="$PROJECT_DIR$/07-SpringIOC容器源码分析(下)/spring-framework-5.1.8.RELEASE/spring-z-tx" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/08-手写IOC与MVC源码分析/spring-z-mvc-2" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/08-手写IOC与MVC源码分析/spring-z-mvc-2" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/12-Spring整合MyBatis源码分析/spring-mybatis/spring-z-mybatis" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/12-Spring整合MyBatis源码分析/spring-mybatis/spring-z-mybatis" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/12-Spring整合MyBatis源码分析/spring-mybatis/spring-z-mybatis-2" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/12-Spring整合MyBatis源码分析/spring-mybatis/spring-z-mybatis-2" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/12-Spring整合MyBatis源码分析/spring-mybatis/spring-z-tx" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/12-Spring整合MyBatis源码分析/spring-mybatis/spring-z-tx" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
